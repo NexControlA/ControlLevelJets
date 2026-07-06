@@ -23,7 +23,7 @@
         </utu:ShadowContainer.Shadows>
 
         <!-- Shadow content -->
-        <Grid Width="350" Height="350" Padding="20 35 20 20">
+        <Grid Width="350" Height="350" Padding="20 30">
             <utu:AutoLayout
                 Orientation="Vertical"
                 Spacing="10">
