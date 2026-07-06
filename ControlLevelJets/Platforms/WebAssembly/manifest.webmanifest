@@ -1,0 +1,10 @@
+{
+  "background_color": "#ffffff",
+  "description": "ControlLevelJets",
+  "display": "standalone",
+  "name": "ControlLevelJets",
+  "short_name": "ControlLevelJets",
+  "start_url": "/index.html",
+  "theme_color": "#ffffff",
+  "scope": "/"
+}

@@ -1,0 +1,45 @@
+﻿<Page x:Class="ControlLevelJets.Presentation.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:ControlLevelJets.Presentation"
+      xmlns:uen="using:Uno.Extensions.Navigation.UI"
+      xmlns:utu="using:Uno.Toolkit.UI"
+      NavigationCacheMode="Required"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid utu:SafeArea.Insets="VisibleBounds">
+
+            <NavigationView uen:Region.Attached="True"
+                            x:Name="NavigationView"
+                            IsBackButtonVisible="Collapsed"
+                            IsSettingsVisible="False"
+                            CompactPaneLength="40"
+                            OpenPaneLength="200"
+                            PaneDisplayMode="Auto"
+                            IsPaneOpen="False">
+
+                <NavigationView.MenuItems>
+                    <NavigationViewItem Content="Home" uen:Region.Name="Home">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xE80F;" FontFamily="Segoe Fluent Icons" />
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                    <NavigationViewItem Content="Trends" uen:Region.Name="Trends">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xe9d2;" FontFamily="{ThemeResource SymbolThemeFontFamily}" FontSize="40" />
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                    <NavigationViewItem Content="Settings Values" />
+                </NavigationView.MenuItems>
+                <Grid uen:Region.Attached="True" uen:Region.Navigator="Visibility" />
+
+                <NavigationView.PaneFooter>
+                    <TextBlock
+                        Visibility="{Binding ElementName=NavigationView,
+                         Path=IsPaneOpen,
+                         Converter={StaticResource BoolToVisibilityConverter}}"
+                        HorizontalAlignment="Center" Text="Develop by NexControl" />
+                </NavigationView.PaneFooter>
+            </NavigationView>
+
+        </Grid>
+</Page>

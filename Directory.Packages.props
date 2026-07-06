@@ -1,0 +1,13 @@
+<Project ToolsVersion="15.0">
+  <!--
+    To update the version of Uno, you should instead update the Sdk version in the global.json file.
+
+    See https://aka.platform.uno/using-uno-sdk for more information.
+    See https://aka.platform.uno/using-uno-sdk#implicit-packages for more information regarding the Implicit Packages.
+  -->
+  <ItemGroup>
+    <PackageVersion Include="Uno.CommunityToolkit.WinUI.UI.Controls.Layout" Version="7.1.206-dev.4.g2b0f3dad75" />
+    <PackageVersion Include="Uno.CommunityToolkit.WinUI.UI.Controls.Primitives" Version="7.1.206-dev.4.g2b0f3dad75" />
+    <PackageVersion Include="Uno.Toolkit.Skia.WinUI" Version="8.4.2" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,72 @@
+﻿<UserControl
+    x:Class="ControlLevelJets.Controls.JetCard"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ControlLevelJets.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:utu="using:Uno.Toolkit.UI"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <!-- Data Jet 118 -->
+    <utu:ShadowContainer Background="White" Grid.Column="0" Margin="10 0">
+        <utu:ShadowContainer.Shadows>
+            <utu:ShadowCollection>
+                <utu:Shadow BlurRadius="1"
+                            OffsetX="0"
+                            OffsetY="0"
+                            Opacity="1"
+                            Color="Gray" />
+            </utu:ShadowCollection>
+        </utu:ShadowContainer.Shadows>
+
+        <!-- Shadow content -->
+        <Grid Width="350" Height="350" Padding="20 35 20 20">
+            <utu:AutoLayout
+                Orientation="Vertical"
+                Spacing="10">
+
+                <TextBlock
+                    FontSize="20"
+                    FontWeight="Bold"
+                    Text="{Binding Name}"
+                    HorizontalTextAlignment="Center"
+                    Margin="0 0 0 10" />
+
+                <NumberBox Header="Litros Deseados (L)" PlaceholderText="e.g. 1200"
+                           Value="{Binding DesiredLiters, Mode=TwoWay}" />
+
+                <utu:Divider Foreground="#ebedf0" Margin="0 0 0 10" />
+
+                <utu:AutoLayout Orientation="Horizontal" Spacing="13">
+                    <TextBlock Foreground="Orange">
+                        <Run Text="Litros Deseados:" />
+                        <Run Text="{Binding DesiredLiters, Mode=TwoWay}" />
+                        <Run Text="L" />
+                    </TextBlock>
+                    <TextBlock>
+                        <Run Text="Litros Totales:" />
+                        <Run Text="{Binding TotalLiters}" />
+                        <Run Text="L" />
+                    </TextBlock>
+
+                </utu:AutoLayout>
+                <TextBlock>
+                    <Run Text="Estado Valvula:" />
+                    <Run Text="{Binding ValveStatus}" />
+                </TextBlock>
+
+                <utu:Divider Foreground="#ebedf0" Margin="0 10" />
+
+
+                <utu:AutoLayout Orientation="Horizontal" Spacing="40" HorizontalAlignment="Center"
+                                Padding="15 0 0 0">
+                    <Button Content="Escribir Valores" />
+                    <Button Content="Reset Valores" />
+                </utu:AutoLayout>
+            </utu:AutoLayout>
+        </Grid>
+    </utu:ShadowContainer>
+</UserControl>
