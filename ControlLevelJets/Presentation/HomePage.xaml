@@ -14,41 +14,41 @@
             <!-- Móvil: scroll horizontal, tarjetas en fila -->
             <VisualState x:Name="Narrow">
                 <VisualState.StateTriggers>
-                    <AdaptiveTrigger MinWindowWidth="0"/>
+                    <AdaptiveTrigger MinWindowWidth="0" />
                 </VisualState.StateTriggers>
                 <VisualState.Setters>
-                    <Setter Target="MainScrollViewer.HorizontalScrollMode" Value="Enabled"/>
-                    <Setter Target="MainScrollViewer.VerticalScrollMode" Value="Disabled"/>
-                    <Setter Target="MainScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
-                    <Setter Target="MainScrollViewer.VerticalScrollBarVisibility" Value="Disabled"/>
-                    <Setter Target="CardsLayout.Orientation" Value="Horizontal"/>
+                    <Setter Target="MainScrollViewer.HorizontalScrollMode" Value="Enabled" />
+                    <Setter Target="MainScrollViewer.VerticalScrollMode" Value="Disabled" />
+                    <Setter Target="MainScrollViewer.HorizontalScrollBarVisibility" Value="Auto" />
+                    <Setter Target="MainScrollViewer.VerticalScrollBarVisibility" Value="Disabled" />
+                    <Setter Target="CardsLayout.Orientation" Value="Horizontal" />
                 </VisualState.Setters>
             </VisualState>
         </VisualStateGroup>
     </VisualStateManager.VisualStateGroups>
 
+
+
     <ScrollViewer HorizontalScrollBarVisibility="Auto" HorizontalScrollMode="Enabled"
                   VerticalScrollBarVisibility="Auto" VerticalScrollMode="Enabled"
                   HorizontalAlignment="Center">
 
-        <ItemsRepeater ItemsSource="{Binding Jets}">
+        <Grid RowDefinitions="*, Auto">
+            <ItemsRepeater ItemsSource="{Binding Jets}" Grid.Row="0">
+                <ItemsRepeater.Layout>
+                    <StackLayout x:Name="CardsLayout" Orientation="Horizontal" Spacing="12" />
+                </ItemsRepeater.Layout>
+                <ItemsRepeater.ItemTemplate>
+                    <DataTemplate>
+                        <controls:JetCard />
+                    </DataTemplate>
+                </ItemsRepeater.ItemTemplate>
+            </ItemsRepeater>
 
-            <ItemsRepeater.Layout>
+            <Button Grid.Row="1" Content="Connect CPU" Margin="0 10" HorizontalAlignment="Center"/>
+        </Grid>
 
-                <StackLayout x:Name="CardsLayout" Orientation="Horizontal" Spacing="12"/>
-            </ItemsRepeater.Layout>
 
-            <ItemsRepeater.ItemTemplate>
-
-                <DataTemplate>
-
-                    <controls:JetCard />
-
-                </DataTemplate>
-
-            </ItemsRepeater.ItemTemplate>
-
-        </ItemsRepeater>
     </ScrollViewer>
 
 </Page>
