@@ -1,8 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
-using Windows.Graphics;
-using ControlLevelJets.Controls;
 using ControlLevelJets.Services;
-using Uno.Resizetizer;
 
 namespace ControlLevelJets;
 
@@ -97,12 +94,6 @@ public partial class App : Application
     private void ConfigureWindowSize(Window? window)
     {
         if (window is null) return;
-
-        const int targetWidth = 1200;
-        const int targetHeight = 800;
-
-        // Tamaño inicial
-        // window.AppWindow.Resize(new SizeInt32(targetWidth, targetHeight));
 
         // Límites y comportamiento (solo Desktop: Windows, macOS, Linux)
         if (window.AppWindow.Presenter is Microsoft.UI.Windowing.OverlappedPresenter presenter)

@@ -38,10 +38,15 @@
         </UnoFeatures>
     </PropertyGroup>
     <ItemGroup>
-      <PackageReference Include="S7netplus" />
-      <PackageReference Include="Uno.CommunityToolkit.WinUI.UI.Controls.Layout" />
-      <PackageReference Include="Uno.CommunityToolkit.WinUI.UI.Controls.Primitives" />
-      <PackageReference Include="Uno.Toolkit.Skia.WinUI" />
+        <PackageReference Include="S7netplus"/>
+        <PackageReference Include="Uno.CommunityToolkit.WinUI.UI.Controls.Layout"/>
+        <PackageReference Include="Uno.CommunityToolkit.WinUI.UI.Controls.Primitives"/>
+        <PackageReference Include="Uno.Toolkit.Skia.WinUI"/>
+    </ItemGroup>
+    <ItemGroup>
+    </ItemGroup>
+    <ItemGroup>
+      <UnoIcon Remove="Assets\Icons\icon.svg" />
     </ItemGroup>
 
 </Project>
