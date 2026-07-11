@@ -1,7 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project>
+  <PropertyGroup Condition="'$(UnoForceSingleTFM)'=='true'">
+    <TargetFramework>net10.0-android</TargetFramework>
+    <Configuration>Debug</Configuration>
+  </PropertyGroup>
   <PropertyGroup>
-    <UnoRemoteControlPort>36376#</UnoRemoteControlPort>
     <UnoPlatformIDE>rider</UnoPlatformIDE>
+    <UnoPlatformIDEVersion>1.127.0</UnoPlatformIDEVersion>
+    <UnoPlatformExtension>unoplatform.vscode 0.24.1</UnoPlatformExtension>
+    <UnoRemoteControlPort>54530#</UnoRemoteControlPort>
+    <UnoVSCodeCSharpExtension>ms-dotnettools.csharp 2.140.9</UnoVSCodeCSharpExtension>
+    <UnoVSCodeCSharpDevKitExtension>ms-dotnettools.csdevkit 3.20.199</UnoVSCodeCSharpDevKitExtension>
+    <IsFirstTimeProjectOpen>False</IsFirstTimeProjectOpen>
+    <ActiveDebugFramework>net10.0-desktop</ActiveDebugFramework>
+    <ActiveDebugProfile>ControlLevelJets (Desktop)</ActiveDebugProfile>
+    <SelectedPlatformGroup>Emulator</SelectedPlatformGroup>
+    <_UnoSelectedTargetFramework>net10.0-desktop</_UnoSelectedTargetFramework>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net10.0-android|AnyCPU'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

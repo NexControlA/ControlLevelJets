@@ -6,6 +6,10 @@
     See https://aka.platform.uno/using-uno-sdk#implicit-packages for more information regarding the Implicit Packages.
   -->
   <ItemGroup>
+    <PackageVersion Include="Microsoft.Extensions.Logging.Console" Version="10.0.9" />
+    <PackageVersion Include="S7netplus" Version="0.20.0" />
+    <PackageVersion Include="SkiaSharp.Skottie" Version="4.150.0" />
+    <PackageVersion Include="SkiaSharp.Views.Uno.WinUI" Version="4.150.0" />
     <PackageVersion Include="Uno.CommunityToolkit.WinUI.UI.Controls.Layout" Version="7.1.206-dev.4.g2b0f3dad75" />
     <PackageVersion Include="Uno.CommunityToolkit.WinUI.UI.Controls.Primitives" Version="7.1.206-dev.4.g2b0f3dad75" />
     <PackageVersion Include="Uno.Toolkit.Skia.WinUI" Version="8.4.2" />
