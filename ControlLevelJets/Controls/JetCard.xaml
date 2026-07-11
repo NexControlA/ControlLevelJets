@@ -8,22 +8,16 @@
     xmlns:utu="using:Uno.Toolkit.UI"
     mc:Ignorable="d"
     d:DesignHeight="300"
-    d:DesignWidth="400">
+    d:DesignWidth="400"
+    Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
 
-    <!-- Data Jet 118 -->
-    <utu:ShadowContainer Background="White" Grid.Column="0" Margin="10 0">
-        <utu:ShadowContainer.Shadows>
-            <utu:ShadowCollection>
-                <utu:Shadow BlurRadius="1"
-                            OffsetX="0"
-                            OffsetY="0"
-                            Opacity="1"
-                            Color="Gray" />
-            </utu:ShadowCollection>
-        </utu:ShadowContainer.Shadows>
-
-        <!-- Shadow content -->
-        <Grid Width="350" Height="350" Padding="20 30">
+    <!-- Shadow content -->
+    <Border
+        BorderBrush="#D1D5DB"
+        BorderThickness="1"
+        CornerRadius="0"
+        Width="350" Height="350">
+        <Grid Width="350" Height="350" Padding="20 30" Background="White">
             <utu:AutoLayout
                 Orientation="Vertical"
                 Spacing="10">
@@ -62,11 +56,12 @@
 
 
                 <utu:AutoLayout Orientation="Horizontal" Spacing="40" HorizontalAlignment="Center"
-                                Padding="15 0 0 0">
+                                Padding="15 10 0 0">
                     <Button Content="Escribir Valores" />
                     <Button Content="Reset Valores" />
                 </utu:AutoLayout>
             </utu:AutoLayout>
         </Grid>
-    </utu:ShadowContainer>
+    </Border>
+
 </UserControl>
