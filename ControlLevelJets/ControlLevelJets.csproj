@@ -6,7 +6,7 @@
         <UnoSingleProject>true</UnoSingleProject>
 
         <!-- Display name -->
-        <ApplicationTitle>ControlLevelJets</ApplicationTitle>
+        <ApplicationTitle>Control Level Jets | NexControl</ApplicationTitle>
         <!-- App Identifier -->
         <ApplicationId>com.companyname.ControlLevelJets</ApplicationId>
         <!-- Versions -->
@@ -32,12 +32,13 @@
             Serialization;
             Localization;
             Navigation;
-            ThemeService;
             SkiaRenderer;
+            ThemeService;
             Material;
         </UnoFeatures>
     </PropertyGroup>
     <ItemGroup>
+      <PackageReference Include="S7netplus" />
       <PackageReference Include="Uno.CommunityToolkit.WinUI.UI.Controls.Layout" />
       <PackageReference Include="Uno.CommunityToolkit.WinUI.UI.Controls.Primitives" />
       <PackageReference Include="Uno.Toolkit.Skia.WinUI" />
