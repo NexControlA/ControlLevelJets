@@ -1,6 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using Windows.Graphics;
 using ControlLevelJets.Controls;
+using ControlLevelJets.Services;
 using Uno.Resizetizer;
 
 namespace ControlLevelJets;
@@ -18,7 +19,7 @@ public partial class App : Application
     }
 
     protected Window? MainWindow { get; private set; }
-    protected IHost? Host { get; private set; }
+    public IHost? Host { get; private set; }
 
     [SuppressMessage("Trimming",
         "IL2026:Members annotated with 'RequiresUnreferencedCodeAttribute' require dynamic access otherwise can break functionality when trimming application code",
@@ -76,8 +77,9 @@ public partial class App : Application
                 })
                 .ConfigureServices((context, services) =>
                 {
-                    // TODO: Register your services
-                    //services.AddSingleton<IMyService, MyService>();
+                    services.AddSingleton<IDialogContentService, DialogContentService>();
+                    services.AddSingleton<IS7ConnectionService, S7ConnectionService>();
+                    services.AddTransient<HomeViewModel>();
                 })
                 .UseNavigation(RegisterRoutes)
             );
