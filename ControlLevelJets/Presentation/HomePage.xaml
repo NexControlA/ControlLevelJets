@@ -2,13 +2,10 @@
     x:Class="ControlLevelJets.Presentation.HomePage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:ControlLevelJets.Presentation"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:utu="using:Uno.Toolkit.UI"
     xmlns:controls="using:ControlLevelJets.Controls"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    mc:Ignorable="d">
     <VisualStateManager.VisualStateGroups>
         <VisualStateGroup>
             <!-- Móvil: scroll horizontal, tarjetas en fila -->
@@ -28,24 +25,25 @@
     </VisualStateManager.VisualStateGroups>
 
 
-
     <ScrollViewer HorizontalScrollBarVisibility="Auto" HorizontalScrollMode="Enabled"
                   VerticalScrollBarVisibility="Auto" VerticalScrollMode="Enabled"
                   HorizontalAlignment="Center">
 
+
         <Grid RowDefinitions="*, Auto">
-            <ItemsRepeater ItemsSource="{Binding Jets}" Grid.Row="0">
+            <ItemsRepeater Grid.Row="0" ItemsSource="{Binding Jets}">
                 <ItemsRepeater.Layout>
                     <StackLayout x:Name="CardsLayout" Orientation="Horizontal" Spacing="12" />
                 </ItemsRepeater.Layout>
                 <ItemsRepeater.ItemTemplate>
                     <DataTemplate>
-                        <controls:JetCard />
+                        <controls:JetCard Margin="0 0 15  0"/>
                     </DataTemplate>
                 </ItemsRepeater.ItemTemplate>
             </ItemsRepeater>
 
-            <Button Grid.Row="1" Content="Connect CPU" Margin="0 10" HorizontalAlignment="Center"/>
+            <Button Grid.Row="1" Content="Conectar Controlador" Margin="0 10" HorizontalAlignment="Center"
+                  Command="{Binding ConnectS7StationCommand}" />
         </Grid>
 
 
