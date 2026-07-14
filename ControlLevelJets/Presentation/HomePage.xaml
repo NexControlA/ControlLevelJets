@@ -29,21 +29,22 @@
                   VerticalScrollBarVisibility="Auto" VerticalScrollMode="Enabled"
                   HorizontalAlignment="Center">
 
+        
 
         <Grid RowDefinitions="*, Auto">
             <ItemsRepeater Grid.Row="0" ItemsSource="{Binding Jets}">
                 <ItemsRepeater.Layout>
-                    <StackLayout x:Name="CardsLayout" Orientation="Horizontal" Spacing="12" />
+                    <StackLayout x:Name="CardsLayout" Orientation="Horizontal" />
                 </ItemsRepeater.Layout>
                 <ItemsRepeater.ItemTemplate>
                     <DataTemplate>
-                        <controls:JetCard Margin="0 0 15  0"/>
+                        <controls:JetCard/>
                     </DataTemplate>
                 </ItemsRepeater.ItemTemplate>
             </ItemsRepeater>
 
             <Button Grid.Row="1" Content="Conectar Controlador" Margin="0 10" HorizontalAlignment="Center"
-                  Command="{Binding ConnectS7StationCommand}" />
+                  Command="{Binding ConnectS7StationCommand}"/>
         </Grid>
 
 

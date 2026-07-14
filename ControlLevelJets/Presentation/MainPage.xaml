@@ -14,13 +14,12 @@
                         CompactPaneLength="40"
                         OpenPaneLength="200"
                         PaneDisplayMode="Auto"
-                        IsPaneOpen="False">
+                        IsPaneOpen="False"
+                        PaneTitle="Menu"
+             >
 
             <NavigationView.MenuItems>
-                <NavigationViewItem Content="Home" uen:Region.Name="Home">
-                    <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE80F;" FontFamily="Segoe Fluent Icons" />
-                    </NavigationViewItem.Icon>
+                <NavigationViewItem Content="Home" uen:Region.Name="Home" Icon="Home">
                 </NavigationViewItem>
                 <NavigationViewItem Content="Trends" uen:Region.Name="Trends">
                     <NavigationViewItem.Icon>
@@ -34,6 +33,7 @@
                 </NavigationViewItem>
             </NavigationView.MenuItems>
             <Grid uen:Region.Attached="True" uen:Region.Navigator="Visibility" />
+
 
             <NavigationView.PaneFooter>
                 <TextBlock

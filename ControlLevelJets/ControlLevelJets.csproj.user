@@ -8,16 +8,20 @@
     <UnoPlatformIDE>rider</UnoPlatformIDE>
     <UnoPlatformIDEVersion>1.127.0</UnoPlatformIDEVersion>
     <UnoPlatformExtension>unoplatform.vscode 0.24.1</UnoPlatformExtension>
-    <UnoRemoteControlPort>54530#</UnoRemoteControlPort>
+    <UnoRemoteControlPort>64794</UnoRemoteControlPort>
     <UnoVSCodeCSharpExtension>ms-dotnettools.csharp 2.140.9</UnoVSCodeCSharpExtension>
     <UnoVSCodeCSharpDevKitExtension>ms-dotnettools.csdevkit 3.20.199</UnoVSCodeCSharpDevKitExtension>
     <IsFirstTimeProjectOpen>False</IsFirstTimeProjectOpen>
     <ActiveDebugFramework>net10.0-desktop</ActiveDebugFramework>
     <ActiveDebugProfile>ControlLevelJets (Desktop)</ActiveDebugProfile>
-    <SelectedPlatformGroup>Emulator</SelectedPlatformGroup>
+    <SelectedPlatformGroup>PhysicalDevice</SelectedPlatformGroup>
     <_UnoSelectedTargetFramework>net10.0-desktop</_UnoSelectedTargetFramework>
+    <DefaultDevice>pixel_7_-_api_36_0</DefaultDevice>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net10.0-android|AnyCPU'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net10.0-browserwasm|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

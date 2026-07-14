@@ -1,7 +1,7 @@
 {
   "servers": {
     "uno-devserver": {
-      "url": "http://localhost:54530/mcp"
+      "url": "http://localhost:64794/mcp"
     }
   }
 }

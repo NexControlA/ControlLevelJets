@@ -1,4 +1,4 @@
-﻿namespace ControlLevelJets.Presentation;
+namespace ControlLevelJets.Presentation;
 
 public sealed partial class Shell : UserControl, IContentControlProvider
 {
