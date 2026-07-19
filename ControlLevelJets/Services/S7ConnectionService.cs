@@ -9,7 +9,7 @@ public partial class S7ConnectionService : ObservableObject, IS7ConnectionServic
     private const short PlcRackId = 0;
     private const short PlcSlotId = 1;
 
-    private Plc? PlcStation;
+    public Plc? PlcStation { get; private set; }
 
     private readonly IDialogContentService _dialogContentService;
 
@@ -18,7 +18,7 @@ public partial class S7ConnectionService : ObservableObject, IS7ConnectionServic
         _dialogContentService = dialogContentService;
     }
 
-    public async Task ConnectS7Station()
+    public async Task<bool> ConnectS7Station()
     {
         var dialogResult = await _dialogContentService.ShowConfirmationDialog("Establish Connection", "Are you sure you want to connect to the S7 station?", "Connect");
 
@@ -29,13 +29,15 @@ public partial class S7ConnectionService : ObservableObject, IS7ConnectionServic
                 PlcStation = new Plc(PlcCpuType, PlcIpAddress, PlcRackId, PlcSlotId);
 
                 await PlcStation.OpenAsync();
+                return true;
             }
             catch (Exception ex)
             {
                 await _dialogContentService.ShowContentDialogAsync("Connection Error", $"Failed to connect to the S7 station: {ex.Message}");
+                return false;
             }
         }
-
+        return false;
     }
 
     public Task DisconnectS7Station()
