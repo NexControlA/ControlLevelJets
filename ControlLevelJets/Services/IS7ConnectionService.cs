@@ -4,6 +4,8 @@ namespace ControlLevelJets.Services;
 
 public interface IS7ConnectionService
 {
-    Task ConnectS7Station();
+    Plc? PlcStation { get; }
+
+    Task<bool> ConnectS7Station();
     Task DisconnectS7Station();
 }
