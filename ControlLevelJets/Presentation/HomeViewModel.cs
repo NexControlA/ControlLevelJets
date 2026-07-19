@@ -4,6 +4,7 @@ using ControlLevelJets.Controls;
 using ControlLevelJets.Services;
 using ControlLevelJets.Presentation;
 using ControlLevelJets.Presentation.Interfaces;
+using System.ComponentModel;
 
 namespace ControlLevelJets.Presentation;
 
@@ -12,15 +13,24 @@ public partial class HomeViewModel : ObservableObject, IJetActions
     private readonly IS7ConnectionService _s7ConnectionService;
     private readonly IDialogContentService _dialogContentService;
 
+    private readonly IS7WriteService _s7WriteService;
+    private readonly S7ReadService _s7ReadService;
+
+    // Jets data struct
+    private const int DbNumber = 3;
+    private const int StartByte = 0;
+
     //Jets Data
     public ObservableCollection<JetViewModel> Jets { get; }
 
 
     public HomeViewModel(IDialogContentService dialogContentService,
-        IS7ConnectionService s7ConnectionService)
+        IS7ConnectionService s7ConnectionService, IS7WriteService s7WriteService)
     {
         _dialogContentService = dialogContentService;
         _s7ConnectionService = s7ConnectionService;
+        _s7WriteService = s7WriteService;
+        //_s7ReadService = s7ReadService;
 
         IsConnected = false;
 
@@ -28,47 +38,66 @@ public partial class HomeViewModel : ObservableObject, IJetActions
             new JetViewModel(this)
             {
                 Name = "Jet 118",
-                SetpointLitersAddress = "DB1.DBD0",
-                ResetValuesAddress = "DB1.DBX8.0"
+                SetpointLitersAddress = "DB2.DBW0",
+                ResetValuesAddress = "DB2.DBX2.0",
+               //SetpointLiters = _s7ReadService.SetpointLiters118
             },
             new JetViewModel(this){
                 Name="Jet 107",
-                SetpointLitersAddress = "DB1.DBD4",
-                ResetValuesAddress = "DB1.DBX8.1"
+                SetpointLitersAddress = "DB7.DBW0",
+                ResetValuesAddress = "DB7.DBX2.0"
             },
             new JetViewModel(this){
                 Name="Jet 109",
-                SetpointLitersAddress = "",
-                ResetValuesAddress="",
+                SetpointLitersAddress = "DB5.DBW0",
+                ResetValuesAddress="DB5.DBX2.0"
             }
 
             ];
     }
 
+    public short SetpointLiters118 => _s7ReadService.SetpointLiters118;
+
 
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(IsNotConnected))]
+    [NotifyCanExecuteChangedFor(nameof(ConnectS7StationCommand))]
     private bool _isConnected;
 
     public bool IsNotConnected => !IsConnected;
 
-    [RelayCommand]
+    [RelayCommand(CanExecute = nameof(IsNotConnected))]
     public async Task ConnectS7Station()
     {
-        await _s7ConnectionService.ConnectS7Station();
+        IsConnected = await _s7ConnectionService.ConnectS7Station();
+        Debug.WriteLine($"Value of IsConnected {IsConnected}");
+
+        if (IsConnected)
+        {
+            // Start reading the jets data struct
+            _ = _s7ReadService.ReadJetsStruct(DbNumber, StartByte);
+        }
     }
 
     public async Task WriteValues(JetViewModel jet)
     {
-        Debug.WriteLine($"Test: {jet.Name}");
-        await _dialogContentService.ShowConfirmationDialog("dialog test", $"dialog from actions interface {jet.Name}");
+        var taskOne = _s7WriteService.WriteSetpoint(jet.SetpointLitersAddress, jet.DesiredLiters);
+        var taskTwo = _s7WriteService.ResetValues(jet.ResetValuesAddress, false);
+        await Task.WhenAll(taskOne, taskTwo);
+
     }
 
     public async Task ResetCurrentValues(JetViewModel jet)
     {
-        await _dialogContentService.ShowConfirmationDialog("dialog test", $"dialog from actions interface {jet.Name}");
-
+        await _s7WriteService.ResetValues(jet.ResetValuesAddress, true);
     }
 
-
+    private void OnReadServiceChanged(object? sender, PropertyChangedEventArgs e)
+    {
+        // Handle the event when the read service changes
+        if (e.PropertyName == nameof(_s7ReadService.SetpointLiters118))
+        {
+            OnPropertyChanged(nameof(SetpointLiters118));
+        }
+    }
 }

@@ -9,14 +9,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3AA7D875-1010-447F-9BE0-B7F5DED8738E}|ControlLevelJets\\ControlLevelJets.csproj|c:\\dotnetprojects\\controlleveljets\\controlleveljets\\controls\\jetviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3AA7D875-1010-447F-9BE0-B7F5DED8738E}|ControlLevelJets\\ControlLevelJets.csproj|solutionrelative:controlleveljets\\controls\\jetviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3AA7D875-1010-447F-9BE0-B7F5DED8738E}|ControlLevelJets\\ControlLevelJets.csproj|c:\\dotnetprojects\\controlleveljets\\controlleveljets\\presentation\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3AA7D875-1010-447F-9BE0-B7F5DED8738E}|ControlLevelJets\\ControlLevelJets.csproj|solutionrelative:controlleveljets\\presentation\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3AA7D875-1010-447F-9BE0-B7F5DED8738E}|ControlLevelJets\\ControlLevelJets.csproj|c:\\dotnetprojects\\controlleveljets\\controlleveljets\\services\\s7readservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3AA7D875-1010-447F-9BE0-B7F5DED8738E}|ControlLevelJets\\ControlLevelJets.csproj|solutionrelative:controlleveljets\\services\\s7readservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,23 +18,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainPage.xaml",
-              "DocumentMoniker": "C:\\dotNetProjects\\ControlLevelJets\\ControlLevelJets\\Presentation\\MainPage.xaml",
-              "RelativeDocumentMoniker": "ControlLevelJets\\Presentation\\MainPage.xaml",
-              "ToolTip": "C:\\dotNetProjects\\ControlLevelJets\\ControlLevelJets\\Presentation\\MainPage.xaml",
-              "RelativeToolTip": "ControlLevelJets\\Presentation\\MainPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-07-13T23:28:17.498Z"
             },
             {
               "$type": "Document",
@@ -52,9 +32,10 @@
               "RelativeDocumentMoniker": "ControlLevelJets\\Controls\\JetViewModel.cs",
               "ToolTip": "C:\\dotNetProjects\\ControlLevelJets\\ControlLevelJets\\Controls\\JetViewModel.cs",
               "RelativeToolTip": "ControlLevelJets\\Controls\\JetViewModel.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAkwB0AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-13T04:41:04.385Z"
+              "WhenOpened": "2026-07-19T01:04:10.018Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -64,22 +45,10 @@
               "RelativeDocumentMoniker": "ControlLevelJets\\Presentation\\HomeViewModel.cs",
               "ToolTip": "C:\\dotNetProjects\\ControlLevelJets\\ControlLevelJets\\Presentation\\HomeViewModel.cs",
               "RelativeToolTip": "ControlLevelJets\\Presentation\\HomeViewModel.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAkwCgAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAcwGMAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-13T01:43:29.336Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "S7ReadService.cs",
-              "DocumentMoniker": "C:\\dotNetProjects\\ControlLevelJets\\ControlLevelJets\\Services\\S7ReadService.cs",
-              "RelativeDocumentMoniker": "ControlLevelJets\\Services\\S7ReadService.cs",
-              "ToolTip": "C:\\dotNetProjects\\ControlLevelJets\\ControlLevelJets\\Services\\S7ReadService.cs",
-              "RelativeToolTip": "ControlLevelJets\\Services\\S7ReadService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-13T04:38:04.315Z"
             }
           ]
         }

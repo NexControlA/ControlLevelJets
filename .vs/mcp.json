@@ -1,7 +1,15 @@
 {
   "servers": {
     "uno-devserver": {
-      "url": "http://localhost:64794/mcp"
+      "url": "http://localhost:64794/mcp",
+      "command": "dotnet",
+      "args": [
+        "dnx",
+        "-y",
+        "uno.devserver",
+        "--mcp-app"
+      ],
+      "type": "stdio"
     }
   }
 }
