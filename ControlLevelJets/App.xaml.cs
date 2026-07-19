@@ -76,6 +76,8 @@ public partial class App : Application
                 {
                     services.AddSingleton<IDialogContentService, DialogContentService>();
                     services.AddSingleton<IS7ConnectionService, S7ConnectionService>();
+                    services.AddSingleton<IS7WriteService, S7WriteService>();
+                    services.AddSingleton<IS7ReadService, S7ReadService>();
                     services.AddTransient<HomeViewModel>();
                 })
                 .UseNavigation(RegisterRoutes)
