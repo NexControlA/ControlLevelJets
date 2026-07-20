@@ -20,10 +20,7 @@ public partial class S7ConnectionService : ObservableObject, IS7ConnectionServic
 
     public async Task<bool> ConnectS7Station()
     {
-        var dialogResult = await _dialogContentService.ShowConfirmationDialog("Establish Connection", "Are you sure you want to connect to the S7 station?", "Connect");
-
-        if (dialogResult)
-        {
+        
             try
             {
                 PlcStation = new Plc(PlcCpuType, PlcIpAddress, PlcRackId, PlcSlotId);
@@ -38,8 +35,7 @@ public partial class S7ConnectionService : ObservableObject, IS7ConnectionServic
                 await _dialogContentService.ShowContentDialogAsync("Connection Error", $"Failed to connect to the S7 station: {ex.Message}");
                 return false;
             }
-        }
-        return false;
+        
     }
 
     public void DisconnectS7Station()
