@@ -125,7 +125,7 @@ public partial class App : Application
                     new("Main", View: views.FindByViewModel<MainViewModel>(), IsDefault: true,
                         Nested:
                         [
-                            new("Home", View: views.FindByViewModel<HomeViewModel>()),
+                            new("Home", View: views.FindByViewModel<HomeViewModel>(), IsDefault: true),
                         ]),
                 ]
             )
