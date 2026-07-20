@@ -101,8 +101,9 @@ public partial class App : Application
         if (window.AppWindow.Presenter is Microsoft.UI.Windowing.OverlappedPresenter presenter)
         {
             // Tamaño mínimo
-            presenter.PreferredMinimumWidth = 1300;
-            presenter.PreferredMinimumHeight = 700;
+            presenter.PreferredMinimumWidth = 1200;
+            presenter.PreferredMinimumHeight = 500;
+           
 
             // Descomenta si quieres fijar el tamaño (no redimensionable)
             presenter.IsResizable = false;
