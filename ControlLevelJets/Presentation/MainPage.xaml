@@ -21,7 +21,7 @@
             <NavigationView.MenuItems>
                 <NavigationViewItem Content="Home" uen:Region.Name="Home" Icon="Home">
                 </NavigationViewItem>
-                <NavigationViewItem Content="Trends" uen:Region.Name="Trends">
+                <NavigationViewItem Content="Trends">
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xe9d2;" FontFamily="{ThemeResource SymbolThemeFontFamily}" />
                     </NavigationViewItem.Icon>
