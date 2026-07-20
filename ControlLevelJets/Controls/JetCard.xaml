@@ -25,10 +25,11 @@
             </utu:ShadowCollection>
         </utu:ShadowContainer.Shadows>
         <Border
+            
         Width="350" Height="350"
             CornerRadius="5">
             <Grid Width="350" Height="350" Padding="20 30">
-                <utu:AutoLayout
+                <utu:AutoLayout 
                 Orientation="Vertical"
                 Spacing="10">
 
@@ -40,19 +41,19 @@
                     Margin="0 0 0 10" />
 
                     <NumberBox Header="Litros Deseados (L)" PlaceholderText="e.g. 1200"
-                           Value="{Binding DesiredLiters, Mode=TwoWay}" />
+                           Value="{Binding DesiredLiters, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
                     <utu:Divider Foreground="#ebedf0" Margin="0 0 0 10" />
 
                     <utu:AutoLayout Orientation="Horizontal" Spacing="13">
                         <TextBlock Foreground="Orange">
                         <Run Text="Litros Deseados:" />
-                        <Run Text="{Binding SetpointLiters, Mode=TwoWay}" />
+                        <Run Text="{Binding SetpointL, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" />
                         <Run Text="L" />
                         </TextBlock>
-                        <TextBlock>
+                        <TextBlock >
                         <Run Text="Litros Totales:" />
-                        <Run Text="{Binding TotalLiters}" />
+                        <Run Text="{Binding TotalLiters, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
                         <Run Text="L" />
                         </TextBlock>
 
