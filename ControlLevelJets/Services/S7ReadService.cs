@@ -7,41 +7,26 @@ public partial class S7ReadService : ObservableObject, IS7ReadService
 {
     private readonly IS7ConnectionService _s7ConnectionService;
     private readonly IDialogContentService _dialogContentService;
-    private readonly HomeViewModel _homeViewModel;
 
-    // Data Struct
-    //Jet 118
-    [ObservableProperty] private short _setpointLiters118;
-    [ObservableProperty] private float _currentLiters118;
-    [ObservableProperty] private bool _valveStatus118;
-
-    // Jet 107
-    [ObservableProperty] private short _setpointLiters107;
-    [ObservableProperty] private float _currentLiters107;
-    [ObservableProperty] private bool _valveStatus107;
-
-    // Jet 107
-    [ObservableProperty] private short _setpointLiters109;
-    [ObservableProperty] private float _currentLiters109;
-    [ObservableProperty] private bool _valveStatus109;
+    public JetModel JetModel118 { get; } = new();
+    public JetModel JetModel107 { get; } = new();
+    public JetModel JetModel109 { get; } = new();
 
 
     public S7ReadService(IS7ConnectionService s7ConnectionService,
-        IDialogContentService dialogContentService,
-        HomeViewModel homeViewModel)
+        IDialogContentService dialogContentService)
     {
         _s7ConnectionService = s7ConnectionService;
         _dialogContentService = dialogContentService;
-        _homeViewModel = homeViewModel;
     }
 
 
-    public async Task ReadJetsStruct(int dbNumber, int startByte)
+    public async Task ReadJetsStruct(int dbNumber, int startByte, bool isConnected)
     {
         var dispatcherQueue = Microsoft.UI.Dispatching.DispatcherQueue.GetForCurrentThread();
 
 
-        while (_homeViewModel.IsConnected)
+        while (isConnected)
         {
             try
             {
@@ -53,17 +38,17 @@ public partial class S7ReadService : ObservableObject, IS7ReadService
 
                 dispatcherQueue.TryEnqueue(() =>
                 {
-                    SetpointLiters118 = readValues.SetpointLiters118;
-                    CurrentLiters118 = readValues.CurrentLiters118;
-                    ValveStatus118 = readValues.ValveStatus118;
+                    JetModel118.SetpointLiters = readValues.SetpointLiters118;
+                    JetModel118.CurrentLiters = readValues.CurrentLiters118;
+                    JetModel118.ValveStatus = readValues.ValveStatus118;
 
-                    SetpointLiters107 = readValues.SetpointLiters107;
-                    CurrentLiters107 = readValues.CurrentLiters107;
-                    ValveStatus107 = readValues.ValveStatus107;
+                    JetModel107.SetpointLiters = readValues.SetpointLiters107;
+                    JetModel107.CurrentLiters = readValues.CurrentLiters107;
+                    JetModel107.ValveStatus = readValues.ValveStatus107;
 
-                    SetpointLiters109 = readValues.SetpointLiters109;
-                    CurrentLiters109 = readValues.CurrentLiters109;
-                    ValveStatus109 = readValues.ValveStatus109;
+                    JetModel109.SetpointLiters = readValues.SetpointLiters109;
+                    JetModel109.CurrentLiters = readValues.CurrentLiters109;
+                    JetModel109.ValveStatus = readValues.ValveStatus109;
                 });
 
 
@@ -71,14 +56,15 @@ public partial class S7ReadService : ObservableObject, IS7ReadService
             catch
             {
                 await _dialogContentService.ShowContentDialogAsync("Error", "Error reading data from PLC. Please check the connection and try again.", "OK");
+
             }
+
+            await Task.Delay(TimeSpan.FromSeconds(3));
+
+
         }
 
-        await Task.Delay(500);
 
 
     }
-
-
-
 }

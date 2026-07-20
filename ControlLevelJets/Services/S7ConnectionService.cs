@@ -30,9 +30,11 @@ public partial class S7ConnectionService : ObservableObject, IS7ConnectionServic
 
                 await PlcStation.OpenAsync();
                 return true;
+
             }
             catch (Exception ex)
             {
+
                 await _dialogContentService.ShowContentDialogAsync("Connection Error", $"Failed to connect to the S7 station: {ex.Message}");
                 return false;
             }
@@ -40,8 +42,8 @@ public partial class S7ConnectionService : ObservableObject, IS7ConnectionServic
         return false;
     }
 
-    public Task DisconnectS7Station()
+    public void DisconnectS7Station()
     {
-        throw new NotImplementedException();
+        PlcStation?.Close();
     }
 }
