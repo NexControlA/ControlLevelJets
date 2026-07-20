@@ -14,55 +14,54 @@ public partial class HomeViewModel : ObservableObject, IJetActions
     private readonly IDialogContentService _dialogContentService;
 
     private readonly IS7WriteService _s7WriteService;
-    private readonly S7ReadService _s7ReadService;
+    private readonly IS7ReadService _s7ReadService;
 
     // Jets data struct
     private const int DbNumber = 3;
     private const int StartByte = 0;
+
 
     //Jets Data
     public ObservableCollection<JetViewModel> Jets { get; }
 
 
     public HomeViewModel(IDialogContentService dialogContentService,
-        IS7ConnectionService s7ConnectionService, IS7WriteService s7WriteService)
+        IS7ConnectionService s7ConnectionService, IS7WriteService s7WriteService, IS7ReadService s7ReadService)
     {
         _dialogContentService = dialogContentService;
         _s7ConnectionService = s7ConnectionService;
         _s7WriteService = s7WriteService;
-        //_s7ReadService = s7ReadService;
-
-        IsConnected = false;
+        _s7ReadService = s7ReadService;
 
         Jets = [
-            new JetViewModel(this)
+            new JetViewModel(this, _s7ReadService.JetModel118)
             {
                 Name = "Jet 118",
                 SetpointLitersAddress = "DB2.DBW0",
                 ResetValuesAddress = "DB2.DBX2.0",
-               //SetpointLiters = _s7ReadService.SetpointLiters118
+
             },
-            new JetViewModel(this){
+            new JetViewModel(this, _s7ReadService.JetModel107){
                 Name="Jet 107",
                 SetpointLitersAddress = "DB7.DBW0",
                 ResetValuesAddress = "DB7.DBX2.0"
             },
-            new JetViewModel(this){
+            new JetViewModel(this, _s7ReadService.JetModel109){
                 Name="Jet 109",
                 SetpointLitersAddress = "DB5.DBW0",
                 ResetValuesAddress="DB5.DBX2.0"
             }
 
             ];
+
+
     }
-
-    public short SetpointLiters118 => _s7ReadService.SetpointLiters118;
-
 
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(IsNotConnected))]
     [NotifyCanExecuteChangedFor(nameof(ConnectS7StationCommand))]
     private bool _isConnected;
+
 
     public bool IsNotConnected => !IsConnected;
 
@@ -75,7 +74,7 @@ public partial class HomeViewModel : ObservableObject, IJetActions
         if (IsConnected)
         {
             // Start reading the jets data struct
-            _ = _s7ReadService.ReadJetsStruct(DbNumber, StartByte);
+            _ = _s7ReadService.ReadJetsStruct(DbNumber, StartByte, IsConnected);
         }
     }
 
@@ -92,12 +91,4 @@ public partial class HomeViewModel : ObservableObject, IJetActions
         await _s7WriteService.ResetValues(jet.ResetValuesAddress, true);
     }
 
-    private void OnReadServiceChanged(object? sender, PropertyChangedEventArgs e)
-    {
-        // Handle the event when the read service changes
-        if (e.PropertyName == nameof(_s7ReadService.SetpointLiters118))
-        {
-            OnPropertyChanged(nameof(SetpointLiters118));
-        }
-    }
 }
