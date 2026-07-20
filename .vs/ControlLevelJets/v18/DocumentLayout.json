@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\dotNetProjects\\ControlLevelJets\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3AA7D875-1010-447F-9BE0-B7F5DED8738E}|ControlLevelJets\\ControlLevelJets.csproj|c:\\dotnetprojects\\controlleveljets\\controlleveljets\\controlleveljets.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3AA7D875-1010-447F-9BE0-B7F5DED8738E}|ControlLevelJets\\ControlLevelJets.csproj|solutionrelative:controlleveljets\\controlleveljets.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3AA7D875-1010-447F-9BE0-B7F5DED8738E}|ControlLevelJets\\ControlLevelJets.csproj|c:\\dotnetprojects\\controlleveljets\\controlleveljets\\presentation\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AA7D875-1010-447F-9BE0-B7F5DED8738E}|ControlLevelJets\\ControlLevelJets.csproj|solutionrelative:controlleveljets\\presentation\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3AA7D875-1010-447F-9BE0-B7F5DED8738E}|ControlLevelJets\\ControlLevelJets.csproj|c:\\dotnetprojects\\controlleveljets\\controlleveljets\\services\\s7readservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AA7D875-1010-447F-9BE0-B7F5DED8738E}|ControlLevelJets\\ControlLevelJets.csproj|solutionrelative:controlleveljets\\services\\s7readservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3AA7D875-1010-447F-9BE0-B7F5DED8738E}|ControlLevelJets\\ControlLevelJets.csproj|c:\\dotnetprojects\\controlleveljets\\controlleveljets\\services\\s7connectionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AA7D875-1010-447F-9BE0-B7F5DED8738E}|ControlLevelJets\\ControlLevelJets.csproj|solutionrelative:controlleveljets\\services\\s7connectionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3AA7D875-1010-447F-9BE0-B7F5DED8738E}|ControlLevelJets\\ControlLevelJets.csproj|c:\\dotnetprojects\\controlleveljets\\controlleveljets\\presentation\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{3AA7D875-1010-447F-9BE0-B7F5DED8738E}|ControlLevelJets\\ControlLevelJets.csproj|solutionrelative:controlleveljets\\presentation\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3AA7D875-1010-447F-9BE0-B7F5DED8738E}|ControlLevelJets\\ControlLevelJets.csproj|c:\\dotnetprojects\\controlleveljets\\controlleveljets\\presentation\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{3AA7D875-1010-447F-9BE0-B7F5DED8738E}|ControlLevelJets\\ControlLevelJets.csproj|solutionrelative:controlleveljets\\presentation\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3AA7D875-1010-447F-9BE0-B7F5DED8738E}|ControlLevelJets\\ControlLevelJets.csproj|c:\\dotnetprojects\\controlleveljets\\controlleveljets\\presentation\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3AA7D875-1010-447F-9BE0-B7F5DED8738E}|ControlLevelJets\\ControlLevelJets.csproj|solutionrelative:controlleveljets\\presentation\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3AA7D875-1010-447F-9BE0-B7F5DED8738E}|ControlLevelJets\\ControlLevelJets.csproj|c:\\dotnetprojects\\controlleveljets\\controlleveljets\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3AA7D875-1010-447F-9BE0-B7F5DED8738E}|ControlLevelJets\\ControlLevelJets.csproj|c:\\dotnetprojects\\controlleveljets\\controlleveljets\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{3AA7D875-1010-447F-9BE0-B7F5DED8738E}|ControlLevelJets\\ControlLevelJets.csproj|solutionrelative:controlleveljets\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3AA7D875-1010-447F-9BE0-B7F5DED8738E}|ControlLevelJets\\ControlLevelJets.csproj|c:\\dotnetprojects\\controlleveljets\\controlleveljets\\services\\s7connectionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3AA7D875-1010-447F-9BE0-B7F5DED8738E}|ControlLevelJets\\ControlLevelJets.csproj|solutionrelative:controlleveljets\\services\\s7connectionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3AA7D875-1010-447F-9BE0-B7F5DED8738E}|ControlLevelJets\\ControlLevelJets.csproj|c:\\dotnetprojects\\controlleveljets\\controlleveljets\\controls\\jetcard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -47,19 +55,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ControlLevelJets",
+              "DocumentMoniker": "C:\\dotNetProjects\\ControlLevelJets\\ControlLevelJets\\ControlLevelJets.csproj",
+              "RelativeDocumentMoniker": "ControlLevelJets\\ControlLevelJets.csproj",
+              "ToolTip": "C:\\dotNetProjects\\ControlLevelJets\\ControlLevelJets\\ControlLevelJets.csproj",
+              "RelativeToolTip": "ControlLevelJets\\ControlLevelJets.csproj",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA8AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-07-20T21:01:22.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "S7ReadService.cs",
+              "DocumentMoniker": "C:\\dotNetProjects\\ControlLevelJets\\ControlLevelJets\\Services\\S7ReadService.cs",
+              "RelativeDocumentMoniker": "ControlLevelJets\\Services\\S7ReadService.cs",
+              "ToolTip": "C:\\dotNetProjects\\ControlLevelJets\\ControlLevelJets\\Services\\S7ReadService.cs",
+              "RelativeToolTip": "ControlLevelJets\\Services\\S7ReadService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAwwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-20T20:10:46.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "MainPage.xaml",
               "DocumentMoniker": "C:\\dotNetProjects\\ControlLevelJets\\ControlLevelJets\\Presentation\\MainPage.xaml",
               "RelativeDocumentMoniker": "ControlLevelJets\\Presentation\\MainPage.xaml",
-              "ToolTip": "C:\\dotNetProjects\\ControlLevelJets\\ControlLevelJets\\Presentation\\MainPage.xaml*",
-              "RelativeToolTip": "ControlLevelJets\\Presentation\\MainPage.xaml*",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABcAAAA0AAAAAAAAAA==",
+              "ToolTip": "C:\\dotNetProjects\\ControlLevelJets\\ControlLevelJets\\Presentation\\MainPage.xaml",
+              "RelativeToolTip": "ControlLevelJets\\Presentation\\MainPage.xaml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-07-20T20:09:13.405Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Shell.xaml",
               "DocumentMoniker": "C:\\dotNetProjects\\ControlLevelJets\\ControlLevelJets\\Presentation\\Shell.xaml",
               "RelativeDocumentMoniker": "ControlLevelJets\\Presentation\\Shell.xaml",
@@ -72,12 +106,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\dotNetProjects\\ControlLevelJets\\ControlLevelJets\\App.xaml.cs",
               "RelativeDocumentMoniker": "ControlLevelJets\\App.xaml.cs",
-              "ToolTip": "C:\\dotNetProjects\\ControlLevelJets\\ControlLevelJets\\App.xaml.cs*",
-              "RelativeToolTip": "ControlLevelJets\\App.xaml.cs*",
+              "ToolTip": "C:\\dotNetProjects\\ControlLevelJets\\ControlLevelJets\\App.xaml.cs",
+              "RelativeToolTip": "ControlLevelJets\\App.xaml.cs",
               "ViewState": "AgIAAFoAAAAAAAAAAAAQwHAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-20T20:03:36.499Z",
@@ -85,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\dotNetProjects\\ControlLevelJets\\ControlLevelJets\\App.xaml",
               "RelativeDocumentMoniker": "ControlLevelJets\\App.xaml",
@@ -98,20 +132,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "S7ConnectionService.cs",
               "DocumentMoniker": "C:\\dotNetProjects\\ControlLevelJets\\ControlLevelJets\\Services\\S7ConnectionService.cs",
               "RelativeDocumentMoniker": "ControlLevelJets\\Services\\S7ConnectionService.cs",
               "ToolTip": "C:\\dotNetProjects\\ControlLevelJets\\ControlLevelJets\\Services\\S7ConnectionService.cs",
               "RelativeToolTip": "ControlLevelJets\\Services\\S7ConnectionService.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAkwCkAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAcwCIAAAB8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-20T19:53:33.91Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "HomeViewModel.cs",
               "DocumentMoniker": "C:\\dotNetProjects\\ControlLevelJets\\ControlLevelJets\\Presentation\\HomeViewModel.cs",
               "RelativeDocumentMoniker": "ControlLevelJets\\Presentation\\HomeViewModel.cs",
@@ -124,7 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "HomePage.xaml",
               "DocumentMoniker": "C:\\dotNetProjects\\ControlLevelJets\\ControlLevelJets\\Presentation\\HomePage.xaml",
               "RelativeDocumentMoniker": "ControlLevelJets\\Presentation\\HomePage.xaml",
@@ -137,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "JetCard.xaml",
               "DocumentMoniker": "C:\\dotNetProjects\\ControlLevelJets\\ControlLevelJets\\Controls\\JetCard.xaml",
               "RelativeDocumentMoniker": "ControlLevelJets\\Controls\\JetCard.xaml",

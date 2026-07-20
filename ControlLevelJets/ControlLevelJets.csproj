@@ -13,7 +13,7 @@
         <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
         <ApplicationVersion>1</ApplicationVersion>
         <!-- Package Publisher -->
-        <ApplicationPublisher>O=ControlLevelJets</ApplicationPublisher>
+        <ApplicationPublisher>O=Control Nivel Jets</ApplicationPublisher>
         <!-- Package Description -->
         <Description>ControlLevelJets powered by Uno Platform.</Description>
 
