@@ -25,7 +25,6 @@ public partial class S7ReadService : ObservableObject, IS7ReadService
     {
         var dispatcherQueue = Microsoft.UI.Dispatching.DispatcherQueue.GetForCurrentThread();
 
-
         while (isConnected)
         {
             try
@@ -33,8 +32,6 @@ public partial class S7ReadService : ObservableObject, IS7ReadService
                 JetData readValues = (JetData)await _s7ConnectionService.PlcStation.ReadStructAsync<JetData>(
             dbNumber,
             startByte);
-
-
 
                 dispatcherQueue.TryEnqueue(() =>
                 {
@@ -50,21 +47,13 @@ public partial class S7ReadService : ObservableObject, IS7ReadService
                     JetModel109.CurrentLiters = readValues.CurrentLiters109;
                     JetModel109.ValveStatus = readValues.ValveStatus109;
                 });
-
-
             }
             catch
             {
                 await _dialogContentService.ShowContentDialogAsync("Error", "Error reading data from PLC. Please check the connection and try again.", "OK");
 
             }
-
             await Task.Delay(TimeSpan.FromSeconds(3));
-
-
         }
-
-
-
     }
 }
